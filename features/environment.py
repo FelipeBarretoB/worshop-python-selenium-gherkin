@@ -8,6 +8,7 @@ def before_scenario(context, scenario):
     Inicializa el WebDriver y lo almacena en el contexto.
     """
     options = Options()
+    options.add_argument("--headless")  # Ejecutar en modo sin cabeza (sin interfaz gráfica)
     options.add_argument("--incognito")
     options.add_argument("--disable-popup-blocking")
     options.add_argument("--disable-infobars")

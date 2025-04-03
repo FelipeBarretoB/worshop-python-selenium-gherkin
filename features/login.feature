@@ -2,7 +2,7 @@ Feature: Login Feature
   Scenario: Successful login with valid credentials
     Given the user is on the login page
     When the user logs in with valid credentials
-    Then the user should be redirected to the inventory page
+    Then the user should be redirected to the inventory page 
 
   Scenario: Unsuccessful login with invalid credentials
     Given the user is on the login page
@@ -13,3 +13,17 @@ Feature: Login Feature
     Given the user is on the login page
     When the user logs in with empty credentials
     Then an error message should be displayed
+  
+  
+  Scenario: Successful login and buying a backpack
+    Given the user is on the login page
+    When the user logs in with valid credentials
+    Then the user should be redirected to the inventory page
+    When the user adds a backpack to the cart
+    When the user clicks on the shopping cart icon
+    When the user clicks on the checkout button
+    When the user fills out information
+    When the user clicks on the finish button
+    Then the user should see a confirmation message
+
+

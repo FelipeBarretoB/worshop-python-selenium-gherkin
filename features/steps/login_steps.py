@@ -1,4 +1,5 @@
 from behave import given, when, then
+from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 from selenium.webdriver.common.by import By
 
